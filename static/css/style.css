@@ -1,0 +1,9 @@
+.questionDiv{
+    margin:100px;
+    background-color:lightblue;
+    text-align:center
+    /* 3840 x 2160 */
+}
+body{
+    background-color:green
+}

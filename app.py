@@ -113,4 +113,20 @@ def quiz():
     if Sandwiches > top_food:
         top_food = Sandwiches
         top_word = 'Sandwiches'
-    return render_template('results.html', top_word = top_word)
+    if Salad > top_food:
+        top_food = Salad
+        top_word = 'Salad'
+    if top_word == 'Pasta':
+        image_link = "https://pinchofyum.com/wp-content/uploads/Vegan-Vodka-Pasta-Square.jpg"
+    if top_word == "Ramen":
+        image_link = "https://hips.hearstapps.com/hmg-prod/images/190208-delish-ramen-horizontal-093-1550096715.jpg"
+    if top_word == "Salad":
+        image_link = "https://www.olivetomato.com/wp-content/uploads/2019/12/Green-salad-with-feta.jpeg"
+    if top_word == "Steak":
+        image_link = "https://i.ytimg.com/vi/nsw0Px-Pho8/maxresdefault.jpg"
+    if top_word == "Sandwiches":
+        image_link = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190322-ham-sandwich-horizontal-1553721016.png"
+    if top_word == "Sushi":
+        image_link = "https://res.cloudinary.com/tf-lab/image/upload/w_656,h_368,c_fill,g_auto:subject,q_auto,f_auto/restaurant/b4e95a93-b6f6-4a16-a642-358a87c8d0b3/d368dfe4-68b1-4e1e-bd2b-7c917ed6824a.jpg"
+    return render_template('results.html', top_word = top_word, image_link = image_link, time=datetime.now())
+

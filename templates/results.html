@@ -1,10 +1,9 @@
 <html>
     <head>
-        <title>Favorite Food?</title>
+        <title>Your favorite food is...</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}?q={{ time }}" />
     </head>
-    <html>
-        <body class="center" background-image: url('https://ctl.s6img.com/society6/img/cUYLorWNjvAq2MC712Lt_YvkzuQ/w_1500/comforters/swatch/~artwork,fw_6000,fh_6000,iw_6000,ih_6000/s6-0012/a/3850885_6947381/~~/green--teal--blue-fade-comforters.jpg')><body class="center" background-image: url('https://ctl.s6img.com/society6/img/cUYLorWNjvAq2MC712Lt_YvkzuQ/w_1500/comforters/swatch/~artwork,fw_6000,fh_6000,iw_6000,ih_6000/s6-0012/a/3850885_6947381/~~/green--teal--blue-fade-comforters.jpg')>
+    <body>
         <img border="0" alt="Anton's fail" src="https://media.giphy.com/media/P07KUtlPVKvoQ/giphy.gif" width="150" height="100">
         <img border="0" alt="Anton's fail" src="https://i.gifer.com/8ux7.gif" width="150" height="100">
         <img border="0" alt="Anton's fail" src="https://66.media.tumblr.com/06ff2347fe11167de58b3d069de4a1f6/tumblr_n7dw6xv4ty1tw3pz6o1_400.gifv" width="150" height="100">
@@ -17,62 +16,7 @@
         <img border="0" alt="Anton's fail" src="https://media1.giphy.com/media/qTd24wzmpiyis/giphy.gif" width="150" height="100">
         <img border="0" alt="Anton's fail" src="https://media3.giphy.com/media/SasDDqOSRclNu/giphy.gif" width="150" height="100">
         <img border="0" alt="Anton's fail" src="https://media2.giphy.com/media/EDV30lQQ9VW5q/giphy.gif" width="150" height="100">
-    <h1 style="text-align:center">Can we guess your favorite food?</h1>
-        <form action="/sendFood" method="POST">
-        <div class="questionDiv">
-            <p>What's your favorite spice?</p>
-            <input type="radio" id="salt" name="spice" value="salt">
-                <label for="salt">Salt</label><br>
-            <input type="radio" id="no spice" name="spice" value="no spice">
-                <label for="no spice">No Spice!</label><br>
-            <input type="radio" id="pepper" name="spice" value="pepper">
-                <label for="pepper">Pepper</label><br>
-            <br>
-        </div>
-        <div class="questionDiv">
-            <p>What drink do you like with your meal?</p>
-            <input type="radio" id="coke" name="drink" value="coke">
-                <label for="coke">Coke</label><br>
-            <input type="radio" id="champagne" name="drink" value="champagne">
-                <label for="champagne">Champagne</label><br>
-            <input type="radio" id="water" name="drink" value="water">
-                <label for="water">Water</label><br>
-            <br>
-        </div>
-        <div class="questionDiv">
-            <p>If you could travel to one place, where would it be?</p>
-            <input type="radio" id="texas" name="travel" value="texas">
-                <label for="la">Texas</label><br>
-            <input type="radio" id="nowhere" name="travel" value="nowhere">
-                <label for="nowhere">Nah, I'd stay on my couch</label><br>
-            <input type="radio" id="italy" name="travel" value="italy">
-                <label for="italy">Italy</label><br>
-            <input type="radio" id="japan" name="travel" value="japan">
-                <label for="japan">Japan</label><br><br>
-        </div>
-        <div class="questionDiv">
-            <p>What's most important in choosing a delicious meal is that it's…</p>
-            <input type="radio" id="cheap" name="important" value="cheap">
-                <label for="cheap">Cheap</label><br>
-            <input type="radio" id="healthy" name="important" value="healthy">
-                <label for="healthy">Healthy</label><br>
-            <input type="radio" id="flavorful" name="important" value="flavorful">
-                <label for="italy">Flavorful</label><br>
-            <input type="radio" id="filling" name="important" value="filling">
-                <label for="japan">Filling</label><br><br>
-        </div>
-        <div class="questionDiv">
-            <p>Which is your favorite flavor?</p>
-            <input type="radio" id="salty" name="flavor" value="salty">
-                <label for="salty">Salty</label><br>
-            <input type="radio" id="sweet" name="flavor" value="sweet">
-                <label for="sweet">Sweet</label><br>
-            <input type="radio" id="sour" name="flavor" value="sour">
-                <label for="sour">Sour</label><br>
-            <input type="radio" id="bitter" name="flavor" value="bitter">
-                <label for="bitter">Bitter</label><br><br>
-        </div>
-            <input type="submit" value="Submit" text-align="center">
-        </form>
+        <h1 class = "questionDiv">Your favorite food is {{top_word}}!</h1>
+        <h1 class = "questionDiv">Did we guess right?</h1>
     </body>
 </html>
